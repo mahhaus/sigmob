@@ -1,0 +1,50 @@
+{
+  "name": "AlterarEventoRequest",
+  "plural": "AlterarEventoRequests",
+  "base": "Model",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Token":{
+      "type":"string",
+      "required":true
+    },
+    "IdEmpresa": {
+      "type": "number",
+      "required": true
+    },
+    "IdFilial": {
+      "type": "number",
+      "required": true
+    },
+    "IdTipoEvento": {
+      "type": "number",
+      "required": true
+    },
+    "Descricao": {
+      "type": "string",
+      "required": true
+    },
+    "LimiteMaximo": {
+      "type": "string",
+      "required": true
+    },
+    "LimiteMinimo": {
+      "type": "string",
+      "required": true
+    },
+    "Predecessores": {
+      "type": [
+        "CadastrarPredecessorRequest"
+      ],
+      "required": true
+    }
+  },
+  "hidden":[],
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

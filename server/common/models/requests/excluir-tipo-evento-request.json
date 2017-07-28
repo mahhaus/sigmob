@@ -1,0 +1,24 @@
+{
+  "name": "ExcluirTipoEventoRequest",
+  "plural": "ExcluirTipoEventoRequest",
+  "base": "Model",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Token":{
+      "type":"string",
+      "required":true
+    },
+    "Id": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "hidden":[],
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,49 @@
+{
+  "name": "TipoEvento",
+  "plural": "TiposEvento",
+  "base": "PersistedModel",
+
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Id": {
+      "type": "number",
+      "generated": true,
+      "id": true
+    },
+    "Codigo": {
+      "type": "number",
+      "required": true
+    },
+    "Descricao": {
+      "type": "string",
+      "required": true,
+      "index": {
+        "unique": true
+      }
+    },
+    "LimiteMaximo": {
+      "type": "string",
+      "required": true
+    },
+    "LimiteMinimo": {
+      "type": "string",
+      "required": true
+    },
+    "Icone": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "Evento": {
+      "type": "hasOne",
+      "model": "Evento",
+      "foreignKey": "IdTipoEvento"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

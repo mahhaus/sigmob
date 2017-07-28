@@ -1,0 +1,86 @@
+{
+  "name": "Jornada_Alter",
+  "plural": "Jornadas_Alter",
+  "base": "PersistedModel",
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Id": {
+      "type": "number",
+      "generated": true,
+      "id": 1
+    },
+    "IdJornadaReal": {
+      "type": "number",
+      "required": false
+    },
+    "IdUsuario": {
+      "type": "number",
+      "generated": true
+    },
+    "DataInicioJornada":{
+      "type":"Date",
+      "required":true
+    },
+    "HorasEmDirecao": {
+      "type": "string",
+      "generated": true,
+      "default" : "00:00"
+    },
+    "HorasEmEspera": {
+      "type": "string",
+      "generated": true,
+      "default" : "00:00"
+    },
+    "TotalHorasJornada": {
+      "type": "string",
+      "generated": true,
+      "default" : "00:00"
+    },
+    "HorasExtras": {
+      "type": "string",
+      "generated": true,
+      "default" : "00:00"
+    },
+    "HorasEmIntervalo": {
+      "type": "string",
+      "generated": true,
+      "default" : "00:00"
+    },
+    "HorasDiurnas": {
+      "type": "string",
+      "generated": true,
+      "default" : "00:00"
+    },
+    "HorasEmDescDirecao": {
+      "type": "string",
+      "generated": true,
+      "default" : "00:00"
+    },
+    "HorasNoturnas": {
+      "type": "string",
+      "generated": true,
+      "default" : "00:00"
+    },
+    "TotalHorasRepouso": {
+      "type": "string",
+      "generated": true,
+      "default" : "00:00"
+    },
+    "DataFimJornada":{
+      "type":"Date",
+      "required":false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "Apontamentos": {
+      "type": "hasMany",
+      "model": "Apontamento_Alter",
+      "foreignKey": "IdJornada"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

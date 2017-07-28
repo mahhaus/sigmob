@@ -1,0 +1,40 @@
+{
+  "name": "Predecessor",
+  "plural": "Predecessors",
+  "base": "PersistedModel",
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Id": {
+      "type": "number",
+      "generated": true,
+      "id": 1
+    },
+    "IdEvento": {
+      "type": "number",
+      "required": false
+    },
+    "IdTipoEvento": {
+      "type": "number",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "Evento": {
+    "type": "belongsTo",
+    "model": "Evento",
+    "foreignKey": "IdEvento"
+    },
+    "TipoEvento": {
+      "type": "belongsTo",
+      "model": "TipoEvento",
+      "foreignKey": "IdTipoEvento"
+    }
+
+
+  },
+  "acls": [],
+  "methods": {}
+}

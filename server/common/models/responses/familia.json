@@ -1,0 +1,43 @@
+{
+  "name": "Familia",
+  "plural": "Familiares",
+  "base": "PersistedModel",
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Id": {
+      "type": "number",
+      "generated": true,
+      "id":  true
+    },
+    "Nome": {
+      "type": "string",
+      "required": true
+    },
+    "Foto": {
+      "type": "string",
+      "required": true
+    },
+    "Grau": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "Usuario": {
+      "type": "belongsTo",
+      "model": "Usuario",
+      "foreignKey": "IdUsuario"
+    },
+    "Usuario_Familiar":{
+        "type": "belongsTo",
+        "model": "Usuario",
+        "foreignKey": "IdUsuarioFamiliar"
+    }
+    },
+
+  "acls": [],
+  "methods": {}
+}

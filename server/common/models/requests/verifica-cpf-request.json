@@ -1,0 +1,26 @@
+{
+  "name": "VerificaCpfRequest",
+  "plural": "VerificaCpfRequests",
+  "base": "Model",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Token": {
+      "type": "string",
+      "required": true
+    },
+    "Cpf": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "hidden": [
+    "id"
+  ],
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

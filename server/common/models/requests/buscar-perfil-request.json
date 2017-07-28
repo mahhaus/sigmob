@@ -1,0 +1,28 @@
+{
+  "name": "BuscarPerfilRequest",
+  "plural": "BuscarPerfilRequests",
+  "base": "Model",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Token": {
+      "type": "string",
+      "required": true
+    },
+    "TokenFirebase": {
+      "type": "string",
+      "required": true
+    },
+    "SearchId": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "hidden":["id"],
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

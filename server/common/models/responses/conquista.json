@@ -1,0 +1,40 @@
+{
+  "name": "Conquista",
+  "plural": "Conquistas",
+  "base": "PersistedModel",
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Id": {
+      "type": "number",
+      "generated": true,
+      "id":  true
+    },
+    "Descricao": {
+      "type": "string",
+      "required": true
+    },
+    "Valor": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "TipoConquista": {
+      "type": "belongsTo",
+      "model": "TipoConquista",
+      "foreignKey": "IdTipoConquista",
+      "primaryKey": "Id" 
+    },
+    "Usuarios": {
+      "type": "hasMany",
+      "model": "Usuario",
+      "through": "ConquistaUsuario"
+    }
+    },
+
+  "acls": [],
+  "methods": {}
+}

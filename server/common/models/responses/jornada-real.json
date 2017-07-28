@@ -1,0 +1,84 @@
+{
+  "name": "Jornada_Real",
+  "plural": "Jornadas_Reais",
+  "base": "PersistedModel",
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Id": {
+      "type": "number",
+      "generated": true,
+      "id": 1
+    },
+    "IdUsuario": {
+      "type": "number",
+      "generated": true
+    },
+    "DataInicioJornada":{
+      "type":"date",
+      "required":true
+    },
+    "HorasEmDirecao": {
+      "type": "string",
+      "generated": true,
+      "default" : "00:00"
+    },
+    "HorasEmEspera": {
+      "type": "string",
+      "generated": true,
+      "default" : "00:00"
+    },
+    "TotalHorasJornada": {
+      "type": "string",
+      "generated": true,
+      "default" : "00:00"
+    },
+    "HorasExtras": {
+      "type": "string",
+      "generated": true,
+      "default" : "00:00"
+    },
+    "HorasEmIntervalo": {
+      "type": "string",
+      "generated": true,
+      "default" : "00:00"
+    },
+    "HorasDiurnas": {
+      "type": "string",
+      "generated": true,
+      "default" : "00:00"
+    },
+    "HorasEmDescDirecao": {
+      "type": "string",
+      "generated": true,
+      "default" : "00:00"
+    },
+    "HorasNoturnas": {
+      "type": "string",
+      "generated": true,
+      "default" : "00:00"
+    },
+    "TotalHorasRepouso": {
+      "type": "string",
+      "generated": true,
+      "default" : "00:00"
+    },
+    "DataFimJornada":{
+      "type":"date",
+      "required":false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "Apontamentos": {
+      "type": "hasMany",
+      "model": "Apontamento_Real",
+      "foreignKey": "IdJornada"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
+
+
