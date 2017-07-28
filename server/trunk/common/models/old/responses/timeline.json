@@ -1,0 +1,39 @@
+{
+  "name": "Timeline",
+  "plural": "Timelines",
+  "base": "PersistedModel",
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Id": {
+      "type": "number",
+      "generated": true,
+      "id":  true
+    },
+    "Descricao": {
+      "type": "string",
+      "required": true
+    },
+    "Valor": {
+      "type": "string",
+      "required": true
+    },
+    "DataHora": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "Usuario": {
+      "type": "belongsTo",
+      "model": "Usuario",
+      "foreignKey": "IdUsuario",
+      "primaryKey": "Id" 
+    }
+    },
+
+  "acls": [],
+  "methods": {}
+}

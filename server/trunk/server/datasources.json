@@ -1,0 +1,135 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "ats": {
+    "name": "ats",
+    "crud": false,
+    "connector": "rest",
+    "operations": [
+      {
+        "template": {
+          "method": "POST",
+          "url": "http://atsweb.sistemainfo.com.br:90/CheckIn/Integrar",
+          "headers": {
+            "accepts": "application/json",
+            "content-type": "application/json"
+          },
+          "body": "{JSON:object}"
+        },
+        "functions": {
+          "CheckInUsuario": [
+            "JSON"
+          ]
+        }
+      },
+      {
+        "template": {
+          "method": "POST",
+          "url": "http://atsweb.sistemainfo.com.br:90/Usuario/Login",
+          "headers": {
+            "accepts": "application/json",
+            "content-type": "application/json"
+          },
+          "body": "{JSON:object}"
+        },
+        "functions": {
+          "LoginUsuario": [
+            "JSON"
+          ]
+        }
+      },
+      {
+        "template": {
+          "method": "POST",
+          "url": "http://atsweb.sistemainfo.com.br:90/Usuario/Integrar",
+          "headers": {
+            "accepts": "application/json",
+            "content-type": "application/json"
+          },
+          "body": "{JSON:object}"
+        },
+        "functions": {
+          "IntegrarUsuario": [
+            "JSON"
+          ]
+        }
+      },
+      {
+        "template": {
+          "method": "POST",
+          "url": "http://atsweb.sistemainfo.com.br:90/Usuario/HasCadastro",
+          "headers": {
+            "accepts": "application/json",
+            "content-type": "application/json"
+          },
+          "body": "{JSON:object}"
+        },
+        "functions": {
+          "VerificarUsuario": [
+            "JSON"
+          ]
+        }
+      },
+      {
+        "template": {
+          "method": "POST",
+          "url": "http://atsweb.sistemainfo.com.br:90/Usuario/Atualizar",
+          "headers": {
+            "accepts": "application/json",
+            "content-type": "application/json"
+          },
+          "body": "{JSON:object}"
+        },
+        "functions": {
+          "AtualizarUsuario": [
+            "JSON"
+          ]
+        }
+      },
+      {
+        "template": {
+          "method": "POST",
+          "url": "http://atsweb.sistemainfo.com.br:90/Usuario/AlterarSenha",
+          "headers": {
+            "accepts": "application/json",
+            "content-type": "application/json"
+          },
+          "body": "{JSON:object}"
+        },
+        "functions": {
+          "AlterarSenhaMethod": [
+            "JSON"
+          ]
+        }
+      },
+      {
+        "template": {
+          "method": "POST",
+          "url": "http://atsweb.sistemainfo.com.br:92/Hardware/IntegrarDescompactado",
+          "headers": {
+            "accepts": "application/json",
+            "content-type": "application/json"
+          },
+          "body": "{JSON:object}"
+        },
+        "functions": {
+          "CheckInHardware": [
+            "JSON"
+          ]
+        }
+      }
+    ]
+  },
+  "mssqlqra": {
+    "host": "192.168.100",
+    "port": 0,
+    "url": "mssql://sa:siesanta.1234@192.168.100/QRA.Dev",
+    "database": "QRA.Dev",
+    "password": "sie",
+    "name": "mssqlqra",
+    "user": "sa",
+    "connector": "mssql"
+  }
+}

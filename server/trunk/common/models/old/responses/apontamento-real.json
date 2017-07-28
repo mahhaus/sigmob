@@ -1,0 +1,95 @@
+{
+  "name": "Apontamento_Real",
+  "plural": "Apontamentos_Reais",
+  "base": "PersistedModel",
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Id": {
+      "type": "number",
+      "generated": true,
+      "id": 1
+    },
+    "IdEvento": {
+      "type": "number",
+      "required": true
+    },
+    "IdUsuario": {
+      "type": "number",
+      "required": true
+    },
+    "IdJornada": {
+      "type": "number",
+      "generated": true
+    },
+    "DataHoraInicio":{
+      "type": "date",
+      "required": true
+    },
+    "DataHoraFim":{
+      "type": "date",
+      "required": false
+    },
+    "Latitude": {
+      "type": "number",
+      "required": true,
+      "mssql": {
+        "columnName": "Latitude",
+        "dataType": "float"
+      }
+    },
+    "Longitude": {
+      "type": "number",
+      "required": true,
+      "mssql": {
+        "columnName": "Longitude",
+        "dataType": "float"
+      }
+    },
+    "LocalEndereco": {
+      "type": "string",
+      "required": false,
+      "mssql": {
+        "columnName": "LocalEndereco",
+        "dataType": "varchar",
+        "dataLength": 200
+      }
+    },
+    "Alterado":{
+      "type": "boolean",
+      "required": true,
+      "default" : false
+    },
+    "AceitaForaLimite":{
+      "type": "boolean",
+      "required": false,
+      "default" : false
+    },
+    "MotivoAlteracao": {
+      "type": "string",
+      "required": false,
+      "mssql": {
+        "columnName": "MotivoAlteracao",
+        "dataType": "varchar",
+        "dataLength": 100
+      }
+    }
+  },
+  "validations": [],
+  "relations": {
+    "Evento": {
+      "type": "belongsTo",
+      "model": "Evento",
+      "foreignKey": "IdEvento"
+    },
+    "JornadaRelations": {
+      "type": "belongsTo",
+      "model": "Jornada_Real",
+      "foreignKey": "IdJornada"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
+

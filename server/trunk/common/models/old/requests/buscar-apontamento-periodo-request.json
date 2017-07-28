@@ -1,0 +1,32 @@
+{
+  "name": "BuscarApontamentoPeriodoRequest",
+  "plural": "BuscarApontamentosPeriodoRequest",
+  "base": "Model",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Token":{
+      "type":"string",
+      "required":true
+    },
+      "DataDe":{
+      "type": "date",
+      "required": true
+    },
+    "DataAte":{
+      "type": "date",
+      "required": true
+    },
+    "IdUsuario": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "hidden":["id"],
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

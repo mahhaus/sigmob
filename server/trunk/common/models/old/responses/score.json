@@ -1,0 +1,43 @@
+{
+  "name": "Score",
+  "plural": "Scores",
+  "base": "PersistedModel",
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Id": {
+      "type": "number",
+      "generated": true,
+      "id":  true
+    },
+    "Ranking": {
+      "type": "number",
+      "required": true
+    },
+    "PontuacaoAtual": {
+      "type": "number",
+      "required": true
+    },
+    "PontuacaoGeral": {
+      "type": "number",
+      "required": true
+    },
+    "Distancia": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "Usuario": {
+      "type": "belongsTo",
+      "model": "Usuario",
+      "foreignKey": "IdUsuario",
+        "primaryKey": "Id" 
+    }
+    },
+
+  "acls": [],
+  "methods": {}
+}

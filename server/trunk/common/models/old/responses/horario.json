@@ -1,0 +1,39 @@
+{
+  "name": "Horario",
+  "plural": "Horarios",
+  "base": "PersistedModel",
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Id": {
+      "type": "number",
+      "generated": true,
+      "id": 1
+    },
+    "IdEmpresa": {
+      "type": "number",
+      "generated": true
+    },
+    "IdFilial": {
+      "type": "number",
+      "generated": true
+    },
+    "JornadaDiaria": {
+      "type": "string",
+      "generated": true
+    },
+    "HorasIntervalo": {
+      "type": "string",
+      "generated": true
+    },
+    "MaxHorasExtras": {
+      "type": "string",
+      "generated": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

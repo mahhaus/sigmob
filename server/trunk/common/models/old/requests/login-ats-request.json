@@ -1,0 +1,30 @@
+{
+  "name": "LoginAtsRequest",
+  "plural": "LoginAtsRequests",
+  "base": "Model",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Token": {
+      "type": "string",
+      "required": true
+    },
+    "Cpf": {
+      "type": "string",
+      "required": true
+    },
+    "Senha":{
+      "type":"string",
+      "required":true
+    }
+  },
+  "hidden": [
+    "id"
+  ],
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

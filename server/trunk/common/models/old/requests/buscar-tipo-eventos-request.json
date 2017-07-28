@@ -1,0 +1,24 @@
+{
+  "name": "BuscarTipoEventoRequest",
+  "plural": "BuscarTipoEventoRequests",
+  "base": "Model",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Token": {
+      "type": "string",
+      "required": true
+    },
+    "SearchId": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "hidden":["id"],
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

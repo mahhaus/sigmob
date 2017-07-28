@@ -1,0 +1,36 @@
+{
+  "name": "BuscarJornadaRequest",
+  "plural": "BuscarJornadaRequests",
+  "base": "Model",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Token": {
+      "type": "string",
+      "required": true
+    },
+    "IdUsuario": {
+      "type": "number",
+      "required": true
+    },
+    "IdHorario": {
+      "type": "number",
+      "required": true
+    },
+    "DataInicioJornada":{
+      "type": "date",
+      "required": false
+    },
+    "SearchId":{
+      "type": "number",
+      "required": false
+    }
+  },
+  "hidden":["id"],
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,77 @@
+{
+  "name": "CadastrarApontamentoRequest",
+  "plural": "CadastrarApontamentoRequests",
+  "base": "Model",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Token":{
+      "type":"string",
+      "required":true
+    },
+    "TokenFirebase": {
+      "type": "string",
+      "required": false
+    },
+    "DataHoraInicio":{
+      "type": "date",
+      "required": true
+    },
+    "Latitude": {
+      "type": "number",
+      "required": true
+    },
+    "Longitude": {
+      "type": "number",
+      "required": true
+    },
+    "LocalEndereco": {
+      "type": "string",
+      "required": true
+    },
+    "Alterado":{
+      "type": "boolean",
+      "required": false,
+      "default" : false
+    },
+    "MotivoAlteracao": {
+      "type": "string",
+      "required": false
+    },
+    "IdJornada": {
+      "type": "number",
+      "required": true
+    },
+    "IdEvento": {
+      "type": "number",
+      "required": true
+    },
+    "IdUsuario": {
+      "type": "number",
+      "required": true
+    },
+    "IdHorario": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "hidden":["id"],
+  "validations": [],
+  "relations": {
+    "Evento": {
+      "type": "belongsTo",
+      "model": "Evento",
+      "foreignKey": "IdEvento",
+      "primaryKey": "Id"
+    },
+    "Jornada-alter": {
+      "type": "belongsTo",
+      "model": "Jornada_Alter",
+      "foreignKey": "IdJornada"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,36 @@
+{
+  "name": "CadastrarTipoEventoRequest",
+  "plural": "CadastrarTipoEventoRequests",
+  "base": "Model",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Token":{
+      "type":"string",
+      "required":true
+    },
+    "Descricao": {
+      "type": "string",
+      "required": true
+    },
+    "LimiteMax": {
+      "type": "string",
+      "required": true
+    },
+    "LimiteMin": {
+      "type": "string",
+      "required": true
+    },
+    "Icone": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "hidden":["id"],
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

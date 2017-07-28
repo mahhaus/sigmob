@@ -1,0 +1,77 @@
+{
+  "name": "AlterarApontamentoRequest",
+  "plural": "AlterarApontamentoRequests",
+  "base": "Model",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+    "properties": {
+      "Token":{
+        "type":"string",
+        "required":true
+      },
+      "TokenFirebase": {
+        "type": "string",
+        "required": true,
+        "id": true
+      },
+      "Id": {
+        "type": "number",
+        "required": true
+      },
+      "DataHoraInicio":{
+        "type": "date",
+        "required": true
+      },
+      "DataHoraFim":{
+        "type": "date",
+        "required": false,
+        "default" : null
+      },
+      "Latitude": {
+        "type": "number",
+        "required": true
+      },
+      "Longitude": {
+        "type": "number",
+        "required": true
+      },
+      "LocalEndereco": {
+        "type": "string",
+        "required": true
+      },
+      "AceitaForaLimite":{
+        "type": "boolean",
+        "required": false,
+        "default" : false
+      },
+      "Alterado":{
+        "type": "boolean",
+        "required": false,
+        "default" : false
+      },
+      "MotivoAlteracao": {
+        "type": "string",
+        "required": false
+      },
+      "IdJornada": {
+        "type": "number",
+        "required": true
+      },
+      "IdUsuario": {
+        "type": "number",
+        "required": true
+      },
+      "IdEvento": {
+        "type": "number",
+        "required": true
+      }
+
+  },
+  "hidden":["id"],
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,28 @@
+{
+  "name": "SearchByTokenRequest",
+  "plural": "SearchByTokenRequest",
+  "base": "Model",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Token": {
+      "type": "string",
+      "required": true
+    },
+    "TokenFirebase": {
+      "type": "string",
+      "required": true
+    },
+    "SearchToken": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "hidden":["id"],
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

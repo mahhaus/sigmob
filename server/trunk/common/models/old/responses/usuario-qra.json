@@ -1,0 +1,106 @@
+{
+  "name": "Usuario",
+  "plural": "Usuarios",
+  "base": "PersistedModel",
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Id": {
+      "type": "number",
+      "generated": true,
+      "id": 1
+    },
+    "TokenFirebase": {
+      "type": "string",
+      "required": true,
+      "index":{"unique":true}
+    },
+    "CPF":{
+      "type":"string",
+      "required":false
+    },
+    "IdAts":{
+      "type":"number",
+      "required":true
+    },
+    "Nome": {
+      "type": "string",
+      "required": true
+    },
+    "Email": {
+      "type": "string",
+      "required": true
+    },
+    "Foto": {
+      "type": "string"
+    },
+    "Apelido": {
+      "type": "string",
+      "required": false
+    },
+    "DataAtualizacao":{
+      "type":"Date",
+      "required":false
+    },
+    "IdEmpresa":{
+      "type":"number",
+      "required":false
+    },
+    "IdHorario":{
+      "type":"number",
+      "required":false
+    },
+    "Empresa": {
+      "type": "string",
+      "required": false
+    },
+    "Placa":{
+      "type": "string",
+      "required": false
+    },
+    "Modelo":{
+      "type": "string",
+      "required": false
+    },
+    "Marca":{
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "Familia": {
+      "type": "hasMany",
+      "model": "Familia",
+      "foreignKey": "IdUsuario"
+    },
+    "Timeline": {
+      "type": "hasMany",
+      "model": "Timeline",
+      "foreignKey": "IdUsuario"
+    },
+    "Amigos": {
+      "type": "hasMany",
+      "model": "AmigoUsuario",
+      "foreignKey":"IdUsuario"
+    },
+    "Apontamentos": {
+      "type": "hasMany",
+      "model": "Apontamento",
+      "foreignKey": "IdUsuario"
+    },
+    "Conquistas":{
+      "type": "hasMany",
+      "model": "Conquista",
+      "through": "ConquistaUsuario"
+    },
+    "Score":{
+      "type":"hasOne",
+      "model":"Score",
+      "foreignKey":"IdUsuario"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

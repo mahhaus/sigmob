@@ -1,0 +1,34 @@
+{
+  "name": "ConquistaUsuario",
+  "plural": "ConquistasUsuarios",
+  "base": "PersistedModel",
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+      "Id":{
+          "type":"number",
+          "generated": true,
+          "id":  true
+      },
+      "DataHora":{
+          "type": "date",
+          "required": true
+      }
+  },
+  "validations": [],
+  "relations": {
+    "Usuario": {
+      "type": "belongsTo",
+      "model": "Usuario",
+      "foreignKey": "IdUsuario"
+    },
+    "Conquista": {
+      "type": "belongsTo",
+      "model": "Conquista",
+      "foreignKey": "IdConquista"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

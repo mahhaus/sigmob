@@ -1,0 +1,68 @@
+{
+  "name": "Evento",
+  "plural": "Eventos",
+  "base": "PersistedModel",
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Id": {
+      "type": "number",
+      "generated": true,
+      "id": true
+    },
+    "IdEmpresa": {
+      "type": "number",
+      "generated": true
+    },
+    "IdFilial": {
+      "type": "number",
+      "generated": true
+    },
+    "IdTipoEvento": {
+      "type": "number",
+      "generated": true
+    },
+    "Descricao": {
+      "type": "string",
+      "required": true,
+      "index": {
+        "unique": true
+      }
+    },
+    "LimiteMaximo": {
+      "type": "string",
+      "required": true
+    },
+    "LimiteMinimo": {
+      "type": "string",
+      "required": true
+    }
+
+  },
+  "validations": [],
+  "relations": {
+    "Apontamento_Alter": {
+      "type": "hasOne",
+      "model": "Apontamento_Alter",
+      "foreignKey": "IdEvento"
+    },
+    "Apontamento_Real": {
+      "type": "hasOne",
+      "model": "Apontamento_Real",
+      "foreignKey": "IdEvento"
+    },
+    "TipoEvento": {
+      "type": "belongsTo",
+      "model": "TipoEvento",
+      "foreignKey": "IdTipoEvento"
+    },
+    "Predecessores": {
+      "type": "hasMany",
+      "model": "Predecessor",
+      "foreignKey": "IdEvento"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
